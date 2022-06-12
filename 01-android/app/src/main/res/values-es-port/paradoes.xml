@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="saludo">Ando parado español</string>
+    <color name="colorpalabra">#34E80C</color>
+    <color name="colorfondo">#8C6188</color>
+    <string name="app_name">movcompbmcr2022a</string>
+</resources>

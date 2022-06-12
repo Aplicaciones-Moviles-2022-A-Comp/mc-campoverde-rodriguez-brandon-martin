@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="saludo">Ando acostado ingles</string>
+    <string name="app_name">movcompbmcr2022a</string>
+    <color name="colorpalabra">#E80CCD</color>
+    <color name="colorfondo">#12A431</color>
+</resources>
