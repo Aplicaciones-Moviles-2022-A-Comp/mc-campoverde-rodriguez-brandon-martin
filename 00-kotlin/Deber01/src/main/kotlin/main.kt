@@ -1,11 +1,8 @@
-import com.sun.jdi.IntegerType
-import java.io.BufferedWriter
-import java.io.File
-import java.io.FileOutputStream
-import java.io.FileWriter
-import javax.swing.JOptionPane
+import java.io.*
 import java.util.*
+import javax.swing.JOptionPane
 import kotlin.collections.ArrayList
+
 
 //Nombre:Brandon Campoverde
 
@@ -15,7 +12,7 @@ fun main(){
     try {
         opcion=JOptionPane.showInputDialog(null,"Escoja una opcion" +
                 "\n1.-Guardar Programa\n2.-Editar Programa\n3.-Eliminar Programa\n4.-Ver Programas" +
-                "\n5.-Guardar Programa en un Archivo de Texto\n6.-Salir","Ménu",-1).toInt()
+                "\n5.-Guardar Programa en un Archivo de Texto\n6.-Cargar datos guardados\n7.-Salir","Ménu",-1).toInt()
         when(opcion){
             (1)->{
                 var nombrep = JOptionPane.showInputDialog(null,"Ingrese el nombre del Programa",
@@ -45,9 +42,12 @@ fun main(){
                 listaProgramas.aniadirPrograma(conjunto)
             }
             (2)->{
-                var editarop=JOptionPane.showInputDialog(null,"| ID | Nombre Programa | SO | Año | Precio |\n"+listaProgramas.imprimirLista()+"" +
-                        "\nIngrese el ID del Programa a editar",
-                "Editar",-1,).toInt()
+                var editarop=JOptionPane.showInputDialog(
+                    null,
+                    "| ID | Nombre Programa | SO | Año | Precio |\n" + listaProgramas.imprimirLista() + "" +
+                            "\nIngrese el ID del Programa a editar",
+                    "Editar", -1,
+                ).toInt()
                 if (editarop>=0 && editarop<listaProgramas.listaprog.size){
                     var nuevoPrograma:Programas?
                     nuevoPrograma=listaProgramas.obtenerElemento(editarop)
@@ -161,31 +161,39 @@ fun main(){
                 }
             }
             (3)->{
-               var opcioneliminar=JOptionPane.showInputDialog(null,"| ID | Nombre Programa | SO | Año | Precio |\n"+listaProgramas.imprimirLista()+"" +
-                        "\nIngrese el ID del Programa a Eliminar",
-                    "Eliminar",-1,).toInt()
+               var opcioneliminar=JOptionPane.showInputDialog(
+                   null,
+                   "| ID | Nombre Programa | SO | Año | Precio |\n" + listaProgramas.imprimirLista() + "" +
+                           "\nIngrese el ID del Programa a Eliminar",
+                   "Eliminar", -1,
+               ).toInt()
                 if (opcioneliminar>=0 && opcioneliminar<listaProgramas.listaprog.size) {
                     listaProgramas.eliminarElemento(opcioneliminar)
                     JOptionPane.showMessageDialog(null,"Programa Eliminado","Eliminar",1)
                 }
             }
             (4)->{
-                JOptionPane.showMessageDialog(null,"| ID | Nombre Programa | SO | Año | Precio |\n"+listaProgramas.imprimirLista(),
-                    "Visualizar",-1,)
+                JOptionPane.showMessageDialog(
+                    null, "| ID | Nombre Programa | SO | Año | Precio |\n" + listaProgramas.imprimirLista(),
+                    "Visualizar", -1,
+                )
             }
             (5)->{
                 listaProgramas.guardarArchivo()
+            }
+            (6)->{
+                listaProgramas.leerArchivo()
             }
         }
     }catch (e: java.lang.NumberFormatException){
         JOptionPane.showMessageDialog(null,"Porfavor Ingrese Un Numero","Error",0)
     }
-    }while (opcion !=6)
+    }while (opcion !=7)
 }
 
 class Programas (var nombre:String,var so:ArrayList<String>,var aniosalida:Int,var preciolicencia:Float){
     override fun toString(): String {
-        return "| $nombre | $so | $aniosalida | $preciolicencia |"
+        return "$nombre|$so|$aniosalida|$preciolicencia"
     }
 }
 //Clase para crear lista de programas
@@ -199,7 +207,7 @@ class listaProgramas{
             var salida:String=""
             listaprog.forEachIndexed{
                 indice:Int, valorActual->
-                salida+=("|${indice} ${valorActual}\n")
+                salida+=("| ${indice} | ${valorActual} |\n")
             }
             return salida
         }
@@ -225,11 +233,34 @@ class listaProgramas{
             var salida:String=""
             listaprog.forEachIndexed{
                     indice:Int, valorActual->
-                salida+=("| ${indice} ${valorActual}\n")
+                salida+=("${valorActual}\n")
             }
-            bufferedWriter.write("| ID | Nombre Programa | SO | Año | Precio |\n"+salida)//
+            bufferedWriter.write(salida)
             JOptionPane.showMessageDialog(null,"Se ha guardado exitosamente","Guardar",-1)
             bufferedWriter.close()
+        }
+        fun leerArchivo(){
+            val fr = FileReader("C:/Users/brandon.campoverde/Desktop/test.txt")
+            var fileText = ""
+
+            var i: Int
+            while (fr.read().also { i = it } != -1) {
+                fileText += i.toChar()
+            }
+            var count = 0
+            for (i in 0 until fileText.length) {
+                val letter: Char = fileText[i]
+                if (letter == '\n') ++count
+            }
+            var elemntosArchive=ArrayList<String>(fileText.split("\n"))
+            for(i in 0..count-1){
+                val (nombre,sistema,anios,precio)=elemntosArchive[i].split("|")
+                var sistemas=ArrayList<String>((sistema.substring(1,sistema.length-1)).split(","))
+                val progr= Programas(nombre,sistemas,anios.toInt(),precio.toFloat())
+                listaprog.add(progr)
+            }
+
+            JOptionPane.showMessageDialog(null,"Datos cargados con exito","Leido",-1)
         }
         }
 }
