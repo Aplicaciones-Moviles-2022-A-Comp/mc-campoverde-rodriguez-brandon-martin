@@ -7,14 +7,14 @@ import android.widget.TextView
 
 class AClase09 : AppCompatActivity() {
     var numeroGlobal="0"
-    var textoamostrarclase = findViewById<TextView>(R.id.textmostrarnum09)
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_aclase09)
         val button09 = findViewById<Button>(R.id.btn_a09)
+        var textoamostrarclase = findViewById<TextView>(R.id.textmostrarnum09)
 
         button09.setOnClickListener {
+            textoamostrarclase.setText(numeroGlobal.toString())
             textoamostrarclase.setText(aumentar(textoamostrarclase.text.toString().toInt()).toString())
             numeroGlobal=textoamostrarclase.text.toString()
         }
@@ -25,6 +25,12 @@ class AClase09 : AppCompatActivity() {
         return numero
     }
 
+    override fun onResume() {
+        super.onResume()
+        var textoamostrarclase1 = findViewById<TextView>(R.id.textmostrarnum09)
+        textoamostrarclase1.setText(numeroGlobal.toString())
+    }
+
     override fun onSaveInstanceState(outState: Bundle) {
         outState.run {
             putString("textoGuardado",numeroGlobal)
@@ -32,10 +38,7 @@ class AClase09 : AppCompatActivity() {
         super.onSaveInstanceState(outState)
     }
 
-    override fun onStart() {
-        super.onStart()
-        textoamostrarclase.setText(numeroGlobal.toString())
-    }
+
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         val textoRecuperado:String? = savedInstanceState.getString("textoGuardado")
