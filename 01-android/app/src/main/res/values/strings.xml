@@ -16,4 +16,5 @@
         <item>Lunes</item>
         <item>Martes</item>
     </string-array>
+    <string name="title_activity_bcrudentrenador" translatable="false">BCRUDEntrenador</string>
 </resources>

@@ -46,4 +46,72 @@ class ESqliteHelperEntrenador(contexto:Context?): SQLiteOpenHelper(
         return if(resultadoGuardar.toInt() ==-1) false else true
     }
 
+    fun consultarUsuarioPorId(id: Int): BEntrenador{
+        // val baseDatosLectura = this.readableDatabase
+        val baseDatosLectura = readableDatabase
+        val scriptConsultarUsuario = "SELECT * FROM entrenador WHERE ID = ${id}"
+        val resultadoConsultaLectura = baseDatosLectura.rawQuery(
+            scriptConsultarUsuario,
+            null
+        )
+        val existeUsuario = resultadoConsultaLectura.moveToFirst()
+        val usuarioEncontrado = BEntrenador(0, "", "")
+        if(existeUsuario){
+            do{
+                val id = resultadoConsultaLectura.getInt(0) // columna indice 0 -> ID
+                val nombre = resultadoConsultaLectura.getString(1) // Columna indice 1 -> NOMBRE
+                val descripcion =
+                    resultadoConsultaLectura.getString(2) // Columna indice 2 -> DESCRIPCION
+                if(id!=null){
+                    usuarioEncontrado.id = id
+                    usuarioEncontrado.nombre = nombre
+                    usuarioEncontrado.descripcion = descripcion
+                }
+            }while (resultadoConsultaLectura.moveToNext())
+        }
+        resultadoConsultaLectura.close()
+        baseDatosLectura.close()
+        return usuarioEncontrado
+    }
+    fun eliminarUsuarioFormulario(id: Int): Boolean{
+        //        val conexionEscritura = this.writableDatabase
+        val conexionEscritura = writableDatabase
+        // "SELECT * FROM USUARIO WHERE ID = ?"
+        // arrayOf(
+        //    id.toString()
+        // )
+        val resultadoEliminacion = conexionEscritura
+            .delete(
+                "entrenador",
+                "id=?",
+                arrayOf(
+                    id.toString()
+                )
+            )
+        conexionEscritura.close()
+        return if (resultadoEliminacion.toInt() == -1) false else true
+    }
+    fun actualizarUsuarioFormulario(
+        nombre: String,
+        descripcion: String,
+        idActualizar: Int
+    ): Boolean {
+        val conexionEscritura = writableDatabase
+        val valoresAActualizar = ContentValues()
+        valoresAActualizar.put("nombre", nombre)
+        valoresAActualizar.put("descripcion", descripcion)
+        val resultadoActualizacion = conexionEscritura
+            .update(
+                "entrenador", // Nombre tabla
+                valoresAActualizar,  // Valores a actualizar
+                "id=?", // Clausula Where
+                arrayOf(
+                    idActualizar.toString()
+                ) // Parametros clausula Where
+            )
+        conexionEscritura.close()
+        return if (resultadoActualizacion == -1) false else true
+
+    }
+
 }

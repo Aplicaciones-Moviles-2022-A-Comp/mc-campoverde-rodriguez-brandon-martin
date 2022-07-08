@@ -55,6 +55,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //Base de datos sqlite
+        EBaseDEDatos.TablaEntrenador = ESqliteHelperEntrenador(this)
+
         Sentry.captureMessage("testing SDK setup", SentryLevel.INFO);
 
         val botonCicloVida = findViewById<Button>(R.id.btn_ciclo_vida)
@@ -74,6 +77,10 @@ class MainActivity : AppCompatActivity() {
         val botonIntenExplicito = findViewById<Button>(R.id.btn_intent)
         botonIntenExplicito.setOnClickListener{
             abrirActividadParametros(CIntentExplicitoParametros::class.java)
+        }
+        val botonIrCRUDEntrenador = findViewById<Button>(R.id.btn_ir_crud_entrenador)
+        botonIrCRUDEntrenador.setOnClickListener{
+            abrirActividadParametros(BCRUDEntrenador::class.java)
         }
         val botonIntentImplicito = findViewById<Button>(R.id.btn_ir_intent_implicito)
         botonIntentImplicito.setOnClickListener{
@@ -101,7 +108,7 @@ class MainActivity : AppCompatActivity() {
         intentExplicito.putExtra("edad",21)
 
         intentExplicito.putExtra("entrenador_Principal",
-            BEntrenador("Brandon","De Zabala"))
+            BEntrenador(10,"Brandon","De Zabala"))
 
         contenidoIntentExplicito.launch(intentExplicito)
         //startActivityForResult(intentExplicito, CODIGO_RESPUESTA_INTENT_EXPLICITO)//Forma deprecada

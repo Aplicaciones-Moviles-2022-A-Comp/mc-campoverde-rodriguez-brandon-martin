@@ -5,13 +5,13 @@ class BBaseDatosMemoria {
         val arregloBEntrador = arrayListOf<BEntrenador>()
         init {
             arregloBEntrador.add(
-                BEntrenador("Brandon", "No hay")
+                BEntrenador(1,"Brandon", "No hay")
             )
             arregloBEntrador.add(
-                BEntrenador("Martin", "No hay2")
+                BEntrenador(2,"Martin", "No hay2")
             )
             arregloBEntrador.add(
-                BEntrenador("Juan", "No hay3")
+                BEntrenador(3,"Juan", "No hay3")
             )
         }
     }
