@@ -4,7 +4,7 @@ class BBaseDatosMemoria {
     companion object{
         var ListaProgramas= arrayListOf<SistemasOperativos>()
     init {
-        ListaProgramas.add(SistemasOperativos("Ubuntu"))
+        ListaProgramas.add(SistemasOperativos("Ubuntu", arrayListOf("Libre Office","Jhon")))
     }
     }
 }

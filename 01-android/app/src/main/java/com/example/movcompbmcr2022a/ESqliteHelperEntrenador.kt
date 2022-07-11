@@ -38,7 +38,7 @@ class ESqliteHelperEntrenador(contexto:Context?): SQLiteOpenHelper(
         valoresAGuardar.put("nombre",nombre)
         valoresAGuardar.put("descripcion",descripcion)
         val resultadoGuardar = basedatosEscritura.insert(
-            "entrador",
+            "entrenador",
             null,
             valoresAGuardar
         )
