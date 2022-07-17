@@ -91,6 +91,11 @@ class MainActivity : AppCompatActivity() {
             contenidoIntentIMplicito.launch(intentConRespuesta)
             startActivityForResult(intentConRespuesta, CODIGO_RESPUESTA_INTENT_IMPLICITO)
         }
+
+        val btnRecyclerVew = findViewById<Button>(R.id.btn_recycler_view)
+        btnRecyclerVew.setOnClickListener{
+            irActividad(GRecyclerView::class.java)
+        }
     }
 
     fun irActividad(
