@@ -73,6 +73,7 @@ class ESqliteHelperEntrenador(contexto:Context?): SQLiteOpenHelper(
         baseDatosLectura.close()
         return usuarioEncontrado
     }
+
     fun eliminarUsuarioFormulario(id: Int): Boolean{
         //        val conexionEscritura = this.writableDatabase
         val conexionEscritura = writableDatabase

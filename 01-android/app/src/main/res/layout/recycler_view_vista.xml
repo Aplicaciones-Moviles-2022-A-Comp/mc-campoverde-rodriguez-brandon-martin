@@ -53,8 +53,8 @@
         android:text="Like"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toEndOf="@+id/tv_likes"
         app:layout_constraintTop_toBottomOf="@+id/tv_cedula"
-        app:layout_constraintVertical_bias="0.441" />
+        app:layout_constraintVertical_bias="0.44" />
 </androidx.constraintlayout.widget.ConstraintLayout>
