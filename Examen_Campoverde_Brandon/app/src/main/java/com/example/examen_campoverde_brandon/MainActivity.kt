@@ -10,7 +10,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
-
+//Examen Campoverde Brandon
 class MainActivity : AppCompatActivity() {
     val arreglo : ArrayList<SistemasOperativos> = BBaseDatosMemoria.ListaProgramas
     var idItemSeleccionado = 0
