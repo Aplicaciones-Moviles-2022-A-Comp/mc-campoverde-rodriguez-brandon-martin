@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Examen_Campoverde_Brandon</string>
+    <string name="titulo_pantallaSO" translatable="false">Sistemas Operativos</string>
+    <!--Aniadir SO-->
+    <string name="aniadir" translatable="false">Añadir</string>
+    <string name="titulo_pantallaAniadirSO" translatable="false">Añadir Sistemas Operativos</string>
+    <string name="hint_aniadir_nombreso" translatable="false">Nombre SO</string>
+    <string name="aniadir_programa" translatable="false">Añadir Programa</string>
+    <string name="salir" translatable="false">Salir</string>
+    <string name="editar_nombre_so" translatable="false">Editar Nombre SO</string>
+    <string name="cancelar" translatable="false">Cancelar</string>
+    <string name="actualizar" translatable="false">Actualizar</string>
+    <string name="programas" translatable="false">Programas</string>
+    <string name="nombre_programa" translatable="false">Nombre Programa</string>
+    <string name="editar_nombre_programa" translatable="false">Editar Nombre Programa</string>
+</resources>

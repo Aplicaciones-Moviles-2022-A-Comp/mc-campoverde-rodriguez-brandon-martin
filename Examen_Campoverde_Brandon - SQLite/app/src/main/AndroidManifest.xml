@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.examen_campoverde_brandon">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Examen_Campoverde_Brandon"
+        tools:targetApi="31">
+        <activity
+            android:name=".EditarNombrePrograma"
+            android:exported="false" />
+        <activity
+            android:name=".AniadirProgramas"
+            android:exported="false" />
+        <activity
+            android:name=".EditarNombreSO"
+            android:exported="false" />
+        <activity
+            android:name=".aniadirSO"
+            android:exported="false" />
+        <meta-data android:name="io.sentry.dsn" android:value="https://cd6e916efa6b4293ba15d9ee578d229c@o1255421.ingest.sentry.io/6606698" />
+        <!-- Set tracesSampleRate to 1.0 to capture 100% of transactions for performance monitoring.
+           We recommend adjusting this value in production. -->
+        <meta-data android:name="io.sentry.traces.sample-rate" android:value="1.0" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
