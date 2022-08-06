@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         //Base de datos sqlite
         EBaseDEDatos.TablaEntrenador = ESqliteHelperEntrenador(this)
 
-        Sentry.captureMessage("testing SDK setup", SentryLevel.INFO);
+        //Sentry.captureMessage("testing SDK setup", SentryLevel.INFO);
 
         val botonCicloVida = findViewById<Button>(R.id.btn_ciclo_vida)
         botonCicloVida.
@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
         botonActividad09.setOnClickListener{
             irActividad(AClase09::class.java)
         }
-        val botonListView = findViewById<Button>(R.id.btn_ir_intent_implicito)
+        val botonListView = findViewById<Button>(R.id.button)
         botonListView.setOnClickListener{
             irActividad(BListView::class.java)
         }
@@ -100,6 +100,11 @@ class MainActivity : AppCompatActivity() {
         val botonIrFirebase = findViewById<Button>(R.id.btn_ir_firebase)
         botonIrFirebase.setOnClickListener{
             irActividad(HFirebaseUIAuth::class.java)
+        }
+
+        val botonIrFireSotre = findViewById<Button>(R.id.btn_ir_firestore)
+        botonIrFireSotre.setOnClickListener{
+            irActividad(IFirebasFirestore::class.java)
         }
     }
 
