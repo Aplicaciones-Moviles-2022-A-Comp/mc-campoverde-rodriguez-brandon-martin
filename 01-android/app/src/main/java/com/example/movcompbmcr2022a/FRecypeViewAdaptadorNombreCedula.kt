@@ -32,6 +32,7 @@ class FRecypeViewAdaptadorNombreCedula(
             numeroLikers = numeroLikers+1
             likrdTextView.text = numeroLikers.toString()
             contexto.aumentarTotalLikes()//Donde mi papa :,(
+         //   contexto.irActividad(MainActivity::class.java)
         }
 
     }

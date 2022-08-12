@@ -11,6 +11,8 @@ import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.QueryDocumentSnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import java.util.*
+import kotlin.collections.ArrayList
 
 class IFirebasFirestore : AppCompatActivity() {
     //var arreglo: ArrayList<ICitiesDTO> = BBaseDatosMemoria.arregloFirebase
@@ -103,6 +105,59 @@ class IFirebasFirestore : AppCompatActivity() {
                     listView.adapter = adaptador
                     adaptador.notifyDataSetChanged()
                 }
+        }
+
+        val btnCrear = findViewById<Button>(R.id.btn_fs_crear)
+        btnCrear.setOnClickListener {
+            val db = Firebase.firestore
+            val referenciaEjemploEstudiante = db.collection("ejemplo")
+                .document("123456789")
+                .collection("estudiante")
+
+            val identificador = Date().time
+
+            val data1 = hashMapOf(
+                "nombre" to "Brandon",
+                "graduado" to false,
+                "promedio" to "0.00",
+                "direccion" to hashMapOf(
+                    "direccion" to "Zabala",
+                    "numCalle" to 4321
+                ),
+                "materias" to listOf("Web","Moviles")
+            )
+            //Con identificador quemado
+            referenciaEjemploEstudiante
+                .document("123456789")
+                .set(data1)
+                .addOnCompleteListener{}
+                .addOnFailureListener{}
+            //Con identificador generado
+            referenciaEjemploEstudiante
+                .document(identificador.toString())
+                .set(data1)
+                .addOnCompleteListener{}
+                .addOnFailureListener{}
+            //Sin Indetificador
+            referenciaEjemploEstudiante
+                .add(data1)
+                .addOnCompleteListener{}
+                .addOnFailureListener{}
+        }
+
+
+
+        val btnEliminar = findViewById<Button>(R.id.btn_fs_eliminar)
+        btnEliminar.setOnClickListener {
+            val db = Firebase.firestore
+            val referenciaEstudiante = db.collection("ejemplo")
+                .document("123456789")
+                .collection("estudiante")
+
+            referenciaEstudiante.document("123456789")
+                .delete()
+                .addOnSuccessListener {  }
+                .addOnFailureListener {  }
         }
     }
 

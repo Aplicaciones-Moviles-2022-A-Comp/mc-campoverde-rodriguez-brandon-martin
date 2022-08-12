@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/brandon.campoverde/Documents/GitHub/mc-campoverde-rodriguez-brandon-martin/ExamenIIBCampoverdeBrandon/app/src/main/res/layout/activity_crear_programas.xml" value="0.1921875" />
+        <entry key="..\:/Users/brandon.campoverde/Documents/GitHub/mc-campoverde-rodriguez-brandon-martin/ExamenIIBCampoverdeBrandon/app/src/main/res/layout/activity_crear_sistema_operativo.xml" value="0.178125" />
+        <entry key="..\:/Users/brandon.campoverde/Documents/GitHub/mc-campoverde-rodriguez-brandon-martin/ExamenIIBCampoverdeBrandon/app/src/main/res/layout/activity_editar_programa.xml" value="0.178125" />
+        <entry key="..\:/Users/brandon.campoverde/Documents/GitHub/mc-campoverde-rodriguez-brandon-martin/ExamenIIBCampoverdeBrandon/app/src/main/res/layout/activity_editar_sistema_operativo.xml" value="0.1921875" />
+        <entry key="..\:/Users/brandon.campoverde/Documents/GitHub/mc-campoverde-rodriguez-brandon-martin/ExamenIIBCampoverdeBrandon/app/src/main/res/layout/activity_main.xml" value="0.1921875" />
+        <entry key="..\:/Users/brandon.campoverde/Documents/GitHub/mc-campoverde-rodriguez-brandon-martin/ExamenIIBCampoverdeBrandon/app/src/main/res/layout/activity_ver_programas.xml" value="0.33" />
+        <entry key="..\:/Users/brandon.campoverde/Documents/GitHub/mc-campoverde-rodriguez-brandon-martin/ExamenIIBCampoverdeBrandon/app/src/main/res/menu/menu_programas.xml" value="0.1921875" />
+        <entry key="..\:/Users/brandon.campoverde/Documents/GitHub/mc-campoverde-rodriguez-brandon-martin/ExamenIIBCampoverdeBrandon/app/src/main/res/menu/menu_sistemas_operativos.xml" value="0.1921875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

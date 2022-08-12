@@ -1,5 +1,6 @@
 package com.example.movcompbmcr2022a
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
@@ -39,5 +40,11 @@ class GRecyclerView : AppCompatActivity() {
         totalLikes= totalLikes+1
         val totaLikesTextView = findViewById<TextView>(R.id.tv_total_likes)
         totaLikesTextView.text = totalLikes.toString()
+    }
+    fun irActividad(
+        clase:Class<*>
+    ){
+        val intent = Intent(this, clase)
+        startActivity(intent)
     }
 }

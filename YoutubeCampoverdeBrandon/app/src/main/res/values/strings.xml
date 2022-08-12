@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">YouTube-Campoverde Brandon</string>
+    <!--Strings-->
+    <string name="youtube" translatable="false">YouTube</string>
+</resources>

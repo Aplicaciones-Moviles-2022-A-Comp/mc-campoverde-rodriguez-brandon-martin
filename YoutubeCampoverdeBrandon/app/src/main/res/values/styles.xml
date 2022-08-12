@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MenuA" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+    <item name="navigationViewStyle">@style/AppNavigationViewStyle</item>
+</style>
+    <style name="AppNavigationViewStyle" parent="Widget.MaterialComponents.NavigationView">
+        <item name="itemTextAppearance">@style/AppNavigationViewItemAppearance</item>
+    </style>
+    <style name="AppNavigationViewItemAppearance" parent="@style/TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textSize">7dp</item>
+    </style>
+</resources>

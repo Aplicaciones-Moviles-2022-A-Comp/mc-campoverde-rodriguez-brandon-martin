@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "514089315186",
+    "project_id": "exameniib-campoverde-brandon",
+    "storage_bucket": "exameniib-campoverde-brandon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514089315186:android:c17ca4e8b131d327b20beb",
+        "android_client_info": {
+          "package_name": "com.example.exameniib_campoverdebrandon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "514089315186-fu57r537b2k286vkcl464vvm2ncnv37l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBX3tHLKuQkwA73t9R1I1-Fex9xLvVly3w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "514089315186-fu57r537b2k286vkcl464vvm2ncnv37l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

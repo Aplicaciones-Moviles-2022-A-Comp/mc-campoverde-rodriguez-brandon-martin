@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Examen IIB - Campoverde Brandon</string>
+    <string name="sistemas_operativos" translatable="false">Sistemas Operativos</string>
+    <string name="programas" translatable="false">Programas</string>
+    <string name="editar" translatable="false">Editar</string>
+    <string name="eliminar" translatable="false">Eliminar</string>
+    <string name="ver_programas" translatable="false">Ver Programas</string>
+    <string name="aniadir" translatable="false">Añadir</string>
+    <string name="hint_nombre_so" translatable="false">Nombre SO</string>
+    <string name="salir" translatable="false">Salir</string>
+    <string name="aniadirso" translatable="false">Añadir SO</string>
+    <string name="editarso" translatable="false">Editar SO</string>
+    <string name="aniadirprogramas" translatable="false">Añadir Programas</string>
+    <string name="editarprogramas" translatable="false">Editar Programas</string>
+    <string name="hint_nombre_programa" translatable="false">Nombre Programa</string>
+</resources>
