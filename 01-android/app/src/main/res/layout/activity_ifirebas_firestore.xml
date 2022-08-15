@@ -74,9 +74,29 @@
         android:id="@+id/btn_fs_eliminar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="40dp"
         android:text="Eliminar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_fs_odoc2" />
+
+    <Button
+        android:id="@+id/btn_fs_epaginar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="44dp"
+        android:text="E Paginar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_fs_crear" />
+
+    <Button
+        android:id="@+id/btn_fs_paginar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="48dp"
+        android:text="Paginar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_fs_epaginar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,8 +7,10 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
 import androidx.appcompat.app.AlertDialog
+import com.google.android.gms.tasks.Task
 import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.QueryDocumentSnapshot
+import com.google.firebase.firestore.QuerySnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.util.*
@@ -17,6 +19,9 @@ import kotlin.collections.ArrayList
 class IFirebasFirestore : AppCompatActivity() {
     //var arreglo: ArrayList<ICitiesDTO> = BBaseDatosMemoria.arregloFirebase
       var arreglo:ArrayList<ICitiesDTO> = ArrayList<ICitiesDTO>()
+
+    var query:Query? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ifirebas_firestore)
@@ -159,6 +164,17 @@ class IFirebasFirestore : AppCompatActivity() {
                 .addOnSuccessListener {  }
                 .addOnFailureListener {  }
         }
+
+        val botonFirebaseEmpazarPaginar = findViewById<Button>(R.id.btn_fs_epaginar)
+        botonFirebaseEmpazarPaginar.setOnClickListener {
+            query=null
+            consultarCiudades()
+        }
+
+        val botonFirebasePaginar = findViewById<Button>(R.id.btn_fs_paginar)
+        botonFirebasePaginar.setOnClickListener {
+            consultarCiudades()
+        }
     }
 
     fun aniadiraArreglo(
@@ -260,6 +276,54 @@ class IFirebasFirestore : AppCompatActivity() {
     fun limpiarArreglo(){
         arreglo.clear()
     }
+
+    fun consultarCiudades(){
+        val db = Firebase.firestore
+        val citiesRef = db
+            .collection("cities")
+            .orderBy("population")
+            .limit(1)
+
+        var tarea: Task<QuerySnapshot>? = null
+        if(query == null){
+            tarea = citiesRef.get()
+        }else{
+            tarea = query!!.get()
+        }
+
+        if (tarea != null){
+            tarea.addOnSuccessListener {
+                documentSnapshot ->
+                gaurdarQuery(documentSnapshot, citiesRef)
+                for (ciudad in documentSnapshot) {
+                    aniadiraArreglo(arreglo,ciudad)
+                }
+                val adaptador = ArrayAdapter(
+                    this,
+                    android.R.layout.simple_list_item_1,
+                    arreglo
+                )
+                val listView = findViewById<ListView>(R.id.lv_firestoreN)
+                listView.adapter = adaptador
+                adaptador.notifyDataSetChanged()
+            }.addOnFailureListener {
+            }
+        }
+    }
+
+    fun gaurdarQuery(
+        documentSnapshots: QuerySnapshot,
+        refCities: Query
+    ){
+        if(documentSnapshots.size() > 0){
+            val ultimoDocumento = documentSnapshots.documents[documentSnapshots.size()-1]
+            query = refCities
+                .startAfter(ultimoDocumento)
+        }else{
+
+        }
+    }
+
     //<
 
     //<=
