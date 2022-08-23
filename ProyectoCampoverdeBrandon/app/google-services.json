@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "895263762880",
+    "project_id": "proyectomoviles-6f4f3",
+    "storage_bucket": "proyectomoviles-6f4f3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895263762880:android:0a6a11a42c7f77a2584025",
+        "android_client_info": {
+          "package_name": "com.example.proyecto_campoverdebrandon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "895263762880-3s83qa94afnhuauckbhrb738cmgrq0vv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALxMdu3o2QUHoGZpmIygskmGWKYZ-PMK8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "895263762880-3s83qa94afnhuauckbhrb738cmgrq0vv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

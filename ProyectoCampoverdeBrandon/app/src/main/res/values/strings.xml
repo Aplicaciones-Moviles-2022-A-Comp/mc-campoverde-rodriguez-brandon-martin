@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Proyecto-Campoverde Brandon</string>
+    <!--Menu-->
+    <string name="menu_subrayado" translatable="false"><u>Menú</u></string>
+    <!--Toolbar-->
+    <string name="supermercados" translatable="false">Supermercados</string>
+    <string name="rodriguez" translatable="false">Rodríguez</string>
+    <!--Inicio-->
+    <string name="unionnombrelocal" translatable="false">Supermercados Rodríguez</string>
+    <string name="promociones" translatable="false">Promociones de la semana</string>
+    <!--Contactanos-->
+    <string name="contactanos" translatable="false">Contactanos</string>
+    <string name="nombre" translatable="false">Nombre</string>
+    <string name="hint_nomnre" translatable="false">Ej.Brandon Campoverde</string>
+    <string name="telefono" translatable="false">Teléfono</string>
+    <string name="hint_telefono" translatable="false">Ej.0999999999</string>
+    <string name="correo" translatable="false">Correo</string>
+    <string name="hint_correo" translatable="false">Ej.ejemplo@mail.com</string>
+    <string name="mensaje" translatable="false">Mensaje</string>
+    <string name="hint_mensaje" translatable="false">Escribe tu mensaje aquí</string>
+    <string name="enviar" translatable="false">Enviar</string>
+    <!--Agradecimiento-->
+    <string name="aceptar" translatable="false">Aceptar</string>
+
+</resources>
