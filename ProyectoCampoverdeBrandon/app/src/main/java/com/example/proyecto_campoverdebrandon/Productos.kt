@@ -3,34 +3,38 @@ package com.example.proyecto_campoverdebrandon
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import android.widget.ArrayAdapter
 import android.widget.ImageButton
-import android.widget.TextView
+import android.widget.Spinner
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 
-class Agradecimiento : AppCompatActivity() {
+class Productos : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_agradecimiento)
+        setContentView(R.layout.activity_productos)
         init()
-        val btnAbrirMenu = findViewById<ImageButton>(R.id.btn_menu_agradecimiento)
-        btnAbrirMenu.setOnClickListener {
-            var asd = findViewById<DrawerLayout>(R.id.dl_agradecimiento)
+        val btnPrueba = findViewById<ImageButton>(R.id.btn_menu_productos)
+        btnPrueba.setOnClickListener {
+            var asd = findViewById<DrawerLayout>(R.id.dl_productos)
             asd.openDrawer(GravityCompat.START)
         }
-        val agradecimiento = intent.getStringExtra("agradecimiento")
-        val tvMostrarAgradecimiento = findViewById<TextView>(R.id.tv_mostrar_agradecimiento)
-        tvMostrarAgradecimiento.setText(agradecimiento)
-        val btnAceptarMensaje = findViewById<Button>(R.id.btn_aceptar_mensaje)
-        btnAceptarMensaje.setOnClickListener {
-            irActividad(MainActivity::class.java)
-        }
+        setupSpiner()
+
     }
 
+    fun setupSpiner(){
+        var list:ArrayList<Categoria> = ArrayList<Categoria>()
+        list.add((Categoria(R.drawable.ic_todo,"Todo")))
+        list.add((Categoria(R.drawable.ic_frutas_y_verduras,"Frutas y Verduras")))
+        list.add((Categoria(R.drawable.ic_carnes,"Carnes")))
+        val spinner =  findViewById<Spinner>(R.id.sp_productos)
+        val adapter = AdaptadorSpinner(this,list)
+        spinner.adapter=adapter
+    }
     fun init(){
-        val menuNav = findViewById<NavigationView>(R.id.nav_agradecimiento)
+        val menuNav = findViewById<NavigationView>(R.id.nav_productos)
         menuNav.setNavigationItemSelectedListener{ item->
             when(item.itemId){
                 R.id.menu_inicio -> {

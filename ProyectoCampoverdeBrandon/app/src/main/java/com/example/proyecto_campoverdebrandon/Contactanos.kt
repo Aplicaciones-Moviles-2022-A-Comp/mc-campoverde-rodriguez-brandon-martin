@@ -60,11 +60,11 @@ class Contactanos : AppCompatActivity() {
                     true
                 }
                 R.id.menu_productos -> {
-
+                    irActividad(Productos::class.java)
                     true
                 }
                 R.id.menu_locales -> {
-
+                    irActividad(Sucursales::class.java)
                     true
                 }
                 R.id.menu_contactanos -> {

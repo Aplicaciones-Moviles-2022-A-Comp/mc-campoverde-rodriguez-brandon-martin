@@ -17,4 +17,5 @@
         <item>Martes</item>
     </string-array>
     <string name="title_activity_bcrudentrenador" translatable="false">BCRUDEntrenador</string>
+    <string name="title_activity_fgoogle_maps" translatable="false">FGoogleMaps</string>
 </resources>

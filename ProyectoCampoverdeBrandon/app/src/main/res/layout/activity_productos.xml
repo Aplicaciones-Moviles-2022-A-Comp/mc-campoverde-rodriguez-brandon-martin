@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Agradecimiento"
-    android:id="@+id/dl_agradecimiento"
+    tools:context=".Productos"
+    android:id="@+id/dl_productos"
     >
     <ScrollView
         android:layout_width="match_parent"
@@ -24,14 +24,13 @@
                 android:id="@+id/txtBottom"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:background="@color/red"
                 android:backgroundTint="@color/red"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtcontenedoragradecimiento"
                 app:layout_constraintVertical_bias="1.0" />
 
             <TextView
@@ -75,7 +74,7 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <ImageButton
-                android:id="@+id/btn_menu_agradecimiento"
+                android:id="@+id/btn_menu_productos"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
                 android:backgroundTint="@color/red"
@@ -92,58 +91,59 @@
                 android:layout_height="50dp"
                 android:layout_marginStart="20dp"
                 app:layout_constraintBottom_toBottomOf="@+id/txtAgradecimiento"
-                app:layout_constraintStart_toEndOf="@+id/btn_menu_agradecimiento"
+                app:layout_constraintStart_toEndOf="@+id/btn_menu_productos"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/logo" />
 
-            <TextView
-                android:id="@+id/txtcontenedoragradecimiento"
-                android:layout_width="350dp"
-                android:layout_height="580dp"
-                android:layout_marginTop="36dp"
-                android:background="@color/white"
-                android:backgroundTint="@color/white"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.491"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtAgradecimiento" />
-
 
             <TextView
-                android:id="@+id/tv_mostrar_agradecimiento"
+                android:id="@+id/tv_categoria"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/nombre"
+                android:layout_marginTop="16dp"
+                android:text="@string/categorias"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="60sp"
+                android:textSize="24sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/txtcontenedoragradecimiento"
-                app:layout_constraintEnd_toEndOf="@+id/txtcontenedoragradecimiento"
-                app:layout_constraintStart_toStartOf="@+id/txtcontenedoragradecimiento"
-                app:layout_constraintTop_toTopOf="@+id/txtcontenedoragradecimiento"
-                app:layout_constraintVertical_bias="0.424"
-                tools:text="Gracias por\n su compra" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.142"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAgradecimiento"
+                tools:text="@string/categorias" />
 
-            <Button
-                android:id="@+id/btn_aceptar_mensaje"
+            <Spinner
+                android:id="@+id/sp_productos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/red"
-                android:text="@string/aceptar"
-                app:layout_constraintBottom_toBottomOf="@+id/txtcontenedoragradecimiento"
-                app:layout_constraintEnd_toEndOf="@+id/txtcontenedoragradecimiento"
-                app:layout_constraintHorizontal_bias="0.475"
-                app:layout_constraintStart_toStartOf="@+id/txtcontenedoragradecimiento"
-                app:layout_constraintTop_toBottomOf="@+id/tv_mostrar_agradecimiento"
-                app:layout_constraintVertical_bias="0.819" />
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.058"
+                app:layout_constraintStart_toEndOf="@+id/tv_categoria"
+                app:layout_constraintTop_toBottomOf="@+id/txtAgradecimiento"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_productos"
+                android:layout_width="300dp"
+                android:layout_height="550dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintBottom_toTopOf="@+id/txtBottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.482"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sp_productos" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_agradecimiento"
+        android:id="@+id/nav_productos"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"

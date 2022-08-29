@@ -106,6 +106,10 @@ class MainActivity : AppCompatActivity() {
         botonIrFireSotre.setOnClickListener{
             irActividad(IFirebasFirestore::class.java)
         }
+        val botonMaps = findViewById<Button>(R.id.btn_google_maps)
+        botonMaps.setOnClickListener{
+            abrirActividadParametros(FGoogleMaps::class.java)
+        }
     }
 
     fun irActividad(

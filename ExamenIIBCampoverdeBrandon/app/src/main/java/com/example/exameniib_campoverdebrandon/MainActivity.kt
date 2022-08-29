@@ -149,7 +149,7 @@ class MainActivity : AppCompatActivity() {
             )
         )
     }
-
+//ASDASD
     fun irActividad(
         clase:Class<*>
     ){
@@ -163,6 +163,7 @@ class MainActivity : AppCompatActivity() {
         val intentExplicito = Intent(this, clase)
         intentExplicito.putExtra("nombreSO",nombreSOGlobal)
         intentExplicito.putExtra("idSO",idSOGlobal)
+        intentExplicito.putExtra("idasd",0)
         contenidoIntentExplicito.launch(intentExplicito)
         //startActivityForResult(intentExplicito, CODIGO_RESPUESTA_INTENT_EXPLICITO)//Forma deprecada
     }

@@ -21,5 +21,12 @@
     <string name="enviar" translatable="false">Enviar</string>
     <!--Agradecimiento-->
     <string name="aceptar" translatable="false">Aceptar</string>
+    <!--Locales-->
+    <string name="quito" translatable="false">Quito</string>
+    <string name="guayaquil" translatable="false">Guayaquil</string>
+    <string name="cuenca" translatable="false">Cuenca</string>
+    <!--Productos-->
+    <string name="categorias" translatable="false">Categorias</string>
+
 
 </resources>
