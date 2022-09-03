@@ -4,10 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/brandon.campoverde/Documents/GitHub/mc-campoverde-rodriguez-brandon-martin/ProyectoCampoverdeBrandon/app/src/main/res/layout/activity_agradecimiento.xml" value="0.22" />
+        <entry key="..\:/Users/brandon.campoverde/Documents/GitHub/mc-campoverde-rodriguez-brandon-martin/ProyectoCampoverdeBrandon/app/src/main/res/layout/activity_carrito.xml" value="0.33" />
         <entry key="..\:/Users/brandon.campoverde/Documents/GitHub/mc-campoverde-rodriguez-brandon-martin/ProyectoCampoverdeBrandon/app/src/main/res/layout/activity_contactanos.xml" value="0.3815925542916236" />
         <entry key="..\:/Users/brandon.campoverde/Documents/GitHub/mc-campoverde-rodriguez-brandon-martin/ProyectoCampoverdeBrandon/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/brandon.campoverde/Documents/GitHub/mc-campoverde-rodriguez-brandon-martin/ProyectoCampoverdeBrandon/app/src/main/res/layout/activity_productos.xml" value="0.33" />
+        <entry key="..\:/Users/brandon.campoverde/Documents/GitHub/mc-campoverde-rodriguez-brandon-martin/ProyectoCampoverdeBrandon/app/src/main/res/layout/activity_productos.xml" value="0.3741598207617625" />
         <entry key="..\:/Users/brandon.campoverde/Documents/GitHub/mc-campoverde-rodriguez-brandon-martin/ProyectoCampoverdeBrandon/app/src/main/res/layout/activity_sucursales.xml" value="0.25" />
+        <entry key="..\:/Users/brandon.campoverde/Documents/GitHub/mc-campoverde-rodriguez-brandon-martin/ProyectoCampoverdeBrandon/app/src/main/res/layout/item_carrito.xml" value="0.33" />
+        <entry key="..\:/Users/brandon.campoverde/Documents/GitHub/mc-campoverde-rodriguez-brandon-martin/ProyectoCampoverdeBrandon/app/src/main/res/layout/item_producto.xml" value="0.75" />
         <entry key="..\:/Users/brandon.campoverde/Documents/GitHub/mc-campoverde-rodriguez-brandon-martin/ProyectoCampoverdeBrandon/app/src/main/res/layout/item_spinner.xml" value="0.67" />
         <entry key="..\:/Users/brandon.campoverde/Documents/GitHub/mc-campoverde-rodriguez-brandon-martin/ProyectoCampoverdeBrandon/app/src/main/res/layout/nav_header_menu.xml" value="0.25" />
         <entry key="..\:/Users/brandon.campoverde/Documents/GitHub/mc-campoverde-rodriguez-brandon-martin/ProyectoCampoverdeBrandon/app/src/main/res/menu/menu_navegacion.xml" value="0.1921875" />

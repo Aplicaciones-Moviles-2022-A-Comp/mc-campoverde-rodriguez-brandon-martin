@@ -27,17 +27,17 @@ class Sucursales : AppCompatActivity() {
         val listaoferta = mutableListOf<CarouselItem>()
         listaoferta.add(
             CarouselItem(
-                imageDrawable = R.drawable.imagen1
+                imageDrawable = R.drawable.quito1
             )
         )
         listaoferta.add(
             CarouselItem(
-                imageDrawable = R.drawable.oferta1
+                imageDrawable = R.drawable.quito2
             )
         )
         listaoferta.add(
             CarouselItem(
-                imageDrawable = R.drawable.oferta2
+                imageDrawable = R.drawable.quito3
             )
         )
         caroselQuito.setData(listaoferta)
@@ -47,17 +47,17 @@ class Sucursales : AppCompatActivity() {
         val listaoferta1 = mutableListOf<CarouselItem>()
         listaoferta1.add(
             CarouselItem(
-                imageDrawable = R.drawable.imagen1
+                imageDrawable = R.drawable.guayaquil1
             )
         )
         listaoferta1.add(
             CarouselItem(
-                imageDrawable = R.drawable.oferta1
+                imageDrawable = R.drawable.guayaquil2
             )
         )
         listaoferta1.add(
             CarouselItem(
-                imageDrawable = R.drawable.oferta2
+                imageDrawable = R.drawable.guayaquil3
             )
         )
         caroselGuayaquil.setData(listaoferta1)
@@ -67,17 +67,17 @@ class Sucursales : AppCompatActivity() {
         val listaoferta2 = mutableListOf<CarouselItem>()
         listaoferta2.add(
             CarouselItem(
-                imageDrawable = R.drawable.imagen1
+                imageDrawable = R.drawable.cuenca1
             )
         )
         listaoferta2.add(
             CarouselItem(
-                imageDrawable = R.drawable.oferta1
+                imageDrawable = R.drawable.cuenca2
             )
         )
         listaoferta2.add(
             CarouselItem(
-                imageDrawable = R.drawable.oferta2
+                imageDrawable = R.drawable.cuenca3
             )
         )
         caroselCuenca.setData(listaoferta2)

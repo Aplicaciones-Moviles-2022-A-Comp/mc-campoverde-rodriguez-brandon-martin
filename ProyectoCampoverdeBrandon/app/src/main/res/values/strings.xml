@@ -27,6 +27,15 @@
     <string name="cuenca" translatable="false">Cuenca</string>
     <!--Productos-->
     <string name="categorias" translatable="false">Categorias</string>
-
-
+    <string name="comprar" translatable="false">Comprar</string>
+    <string name="dolar" translatable="false">$</string>
+    <!--Inicio de Sesión-->
+    <string name="login" translatable="false">Iniciar Sesión</string>
+    <string name="logout" translatable="false">Cerrar Sesión</string>
+    <!--Carrito-->
+    <string name="cancelar" translatable="false">Cancelar</string>
+    <string name="pagar" translatable="false">Pagar</string>
+    <string name="nombreprod" translatable="false">Nombre Producto</string>
+    <string name="numprod" translatable="false">Num. Productos</string>
+    <string name="precio" translatable="false">Precio</string>
 </resources>
